@@ -1,5 +1,16 @@
 const db = require('../configuracionDB/conectarDB')
 
+
+function pedirMarca (callback) {
+    db.any('SELECT NOW()')
+        .then(data => {
+            callback(null, data)
+        })
+        .catch(error => {
+            callback(error)
+        })
+}
+
 function pedirMetas (tabla,callback) {
     db.any(`SELECT * FROM ${tabla}`)
         .then(data => {
@@ -57,4 +68,4 @@ function borrarMeta (tabla,id,callback) {
             callback(error)
         })
 }
-module.exports = {pedirMetas,pedirMeta,crearMeta,actualizarMeta,borrarMeta}
+module.exports = {pedirMarca,pedirMetas,pedirMeta,crearMeta,actualizarMeta,borrarMeta}

@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const {pedirMetas,pedirMeta, crearMeta, actualizarMeta, borrarMeta} = require('../metasDB/metasDB')
+const {pedirMarca,pedirMetas,pedirMeta, crearMeta, actualizarMeta, borrarMeta} = require('../metasDB/metasDB')
 
 /*const meta = {   
   sticker : '🏃‍♂️',
@@ -13,6 +13,16 @@ const {pedirMetas,pedirMeta, crearMeta, actualizarMeta, borrarMeta} = require('.
 }*/
 
 /* GET users listing. */
+router.get('/marca', function(req, res, next) {
+  pedirMarca((error, data) =>{
+    if(error){
+      //return next(error)
+      return res.send('tiempo y hora error')
+    }
+    return res.send(data)
+  })
+});
+
 router.get('/metas', function(req, res, next) {
   pedirMetas('metas', (error, data) =>{
     if(error){
