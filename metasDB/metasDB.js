@@ -1,4 +1,4 @@
-const db = require('../configuracionDB/conectarDB')
+/*const db = require('../configuracionDB/conectarDB')
 
 
 function pedirMarca (callback) {
@@ -63,7 +63,7 @@ function borrarMeta (tabla,id,callback) {
     db.any(`delete from ${tabla} where id=${id};`)
         .then(([data]) => {
             callback(null, data)
-        })
+        })*/
         .catch(error => {
             callback(error)
         })
