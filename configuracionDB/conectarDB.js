@@ -13,6 +13,7 @@ require('dotenv').config()
 }*/
 
 //const db = pgp(cn)
+//editado
 
 const db = pgp(process.env.RENDER_URL)
 
