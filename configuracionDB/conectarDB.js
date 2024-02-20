@@ -1,4 +1,4 @@
-/*const initOptions = {
+const initOptions = {
 }
 const pgp = require('pg-promise')(initOptions)
 
@@ -18,4 +18,4 @@ const cn = {
 const db = pgp(process.env.RENDER_URL)
 
 
-module.exports = db;*/
+module.exports = db;
