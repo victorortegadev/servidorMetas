@@ -1,4 +1,4 @@
-/*const db = require('../configuracionDB/conectarDB')
+const db = require('../configuracionDB/conectarDB')
 
 
 function pedirMarca (callback) {
