@@ -1,6 +1,6 @@
-var express = require('express');
+/*var express = require('express');
 var router = express.Router();
-const {pedirMarca,pedirMetas,pedirMeta, crearMeta, actualizarMeta, borrarMeta} = require('../metasDB/metasDB')
+const {pedirMarca,pedirMetas,pedirMeta, crearMeta, actualizarMeta, borrarMeta} = require('../metasDB/metasDB')*/
 
 /*const meta = {   
   sticker : '🏃‍♂️',
@@ -13,7 +13,7 @@ const {pedirMarca,pedirMetas,pedirMeta, crearMeta, actualizarMeta, borrarMeta} =
 }*/
 
 /* GET users listing. */
-router.get('/marca', function(req, res, next) {
+/*router.get('/marca', function(req, res, next) {
   pedirMarca((error, data) =>{
     if(error){
       //return next(error)
@@ -83,7 +83,7 @@ router.delete('/meta/:id', function(req, res, next) {
         return next(error)
       }
       return res.send(`meta ${id} borrada`)
-    })
+    })*/
   })
 
 });
