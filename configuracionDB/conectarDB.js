@@ -15,7 +15,10 @@ require('dotenv').config()
 //const db = pgp(cn)
 //editado
 
-const db = pgp(process.env.RENDER_URL)
-
-
+const cn = {
+    connectionString: process.env.DATABASE_URL ,
+    ssl:true,
+    extra:{ssl: {rejectUnauthorized: false}}
+};
+const db = pgp(cn)
 module.exports = db;
