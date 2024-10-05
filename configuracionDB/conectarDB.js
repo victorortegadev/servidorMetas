@@ -16,7 +16,6 @@ const cn = {
 
 const db = pgp(cn)
 
-
 /*const cn = {
     connectionString: process.env.DATABASE_URL ,
     ssl:true,
